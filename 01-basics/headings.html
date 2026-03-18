@@ -1,0 +1,83 @@
+<!-- doctype html is used to ensure that the web browsers uses the modern html 
+specification -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title of the webpag -->
+    <title>First Page</title>
+    <!-- this is internal css: css embedded inside html file inside style tag -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* this removes default padding and margin of the page,
+         By default the browser uses , box-sizing: content-box (this means that 
+         the totalwidth or totalheight is calculated after the addition of padding , margin and even 
+         the border sizes around the element)
+         But , when we use box-sizing: border-box ( the totalwidth or totalheight is 
+         is always fixed, if width: 100px, it will always be 100px. The attributes 
+         like padding, margin and border sizes will be included within 100px.) */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container h1 {
+            background-color: blue;
+        }
+
+        h1 {
+            background: red;
+        }
+
+        /* // Here, the line below will be applied to the h1 tag because
+        // it cascades the background color. */
+        /* this means that order matters when you apply css Moreover,
+        there is a priority based system as follows:
+        1. inline css 
+        2. external css
+        3. internal css
+        4. id ( order matters )
+        5. class ( order matters )
+        6. order of similar tag names
+         *NOTE* Order means top to bottom, the bottom one will get more priority
+         */
+
+        h1 {
+            background-color: purple;
+        }
+
+        /* if i remove the inline css from h1 tag then the background color 
+        will be yellow. If I remove class reference then the color will be purple
+        because order matters. */
+    </style>
+
+    <style>
+        h1 {
+            background-color: maroon;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- heading tags are block elements, they take entire width of the screen
+    // Therefore, if I add multiple heading tags inside the body 
+    they will be places vertically on the screen. -->
+
+    <!-- heading tags range from : h1 to h6 -->
+    <div class="container">
+        <h1>Welcome to my page</h1>
+    </div>
+    <h2>something</h2>
+    <h3>Hello, I am writing code right now.</h3>
+    <h4> I am tiny right now.</h4>
+    <h5>I am getting smaller, hehehe</h5>
+    <h6>I am the smallest one on the group right now.</h6>
+</body>
+
+</html>
