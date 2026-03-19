@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with images</title>
+    <style>
+        a img:hover {
+            background-color: rgb(231, 226, 226);
+            border-radius: 8px;
+        }
+
+        figure figcaption {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- img is a self closing tag -->
+    <!-- alt is a description for the image -->
+    <!-- dimensions: height and width -->
+    <img src="boy_character.png" alt="cartoon-character" height="200">
+    <!-- link with image -->
+
+    <a href="https://www.youtube.com/watch?v=WN1FhKMgeLU&list=RDWN1FhKMgeLU&start_radio=1" target="_blank">
+        <img src="boy_character.png" height="100px">
+    </a>
+
+    <!-- figure and figcaption in html -->
+    <figure>
+        <img src="boy_character.png" height="100px">
+        <figcaption>Anime Character</figcaption>
+    </figure>
+
+    <!-- picture tag for multiple image sources 
+    and different screen sizes ( includes fallback
+    image as well) -->
+
+    <picture>
+        <source srcset="https://picsum.photos/1200/800" media="(min-width:480px)">
+        <img src="https://picsum.photos/id/20/400/300" alt="flower" style="width: 100%;">
+    </picture>
+</body>
+
+</html>
