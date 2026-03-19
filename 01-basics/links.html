@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  target: _blank opens the link on a new tab -->
+    <nav>
+        <a href="https://youtube.com" target="_blank">
+            Visit Youtube
+        </a>
+
+        <a href="mailto:bibekbhujel077@gmail.com">Send email</a>
+        <!-- navigate using the id -->
+        <a href="#section1">Go to section1</a>
+        <a href="#section2">Go to section2</a>
+    </nav>
+
+    <!-- internal page anchors using # -->
+    <div class="container">
+        <section id="section1">
+            <p>This is a introduction section one.</p>
+        </section>
+
+        <section id="section2">
+            <p>This is another section two.</p>
+        </section>
+
+
+        <!-- link to download a file -->
+
+        <a href="boy_character.png" dowload>Download Image</a>
+    </div>
+</body>
+
+</html>
