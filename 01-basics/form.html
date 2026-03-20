@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Form</title>
+    <style>
+        button {
+            margin-top: 8px;
+            background-color: rgb(84, 231, 84);
+            border: none;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        input {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="fname">First Name:</label> <br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname">
+        <br>
+        <label for="email">Email</label>
+        <br>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        <br>
+        <label for="password" id="password" name="password">Password</label>
+        <br>
+        <input type="password" id="password" name="password" required placeholder="Enter your password">
+        <br>
+
+        <label for="number" id="number" name="number">Number</label>
+        <br>
+        <input type="number" id="number" name="number">
+        <br>
+
+        <label for="Date" id="Date" name="Date">Date</label>
+        <br>
+        <input type="date" id="Date" name="Date">
+        <br>
+
+        <textarea placeholder="type something here" rows="5" cols="20"></textarea><br>
+        <div>
+            <input type="radio" id="radio" name="fruit" value="apple" checked>
+            <label for="apple">Apple</label><br>
+            <input type="radio" id="mango" name="fruit" value="mango">
+            <label for="mango">Mango</label><br>
+            <input type="radio" id="banana" name="fruit" value="banana">
+            <label for="banana">Banana</label><br>
+            <input type="radio" id="orange" name="fruit" value="orange">
+            <label for="orange">Orange</label><br>
+            <br><br>
+
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> Bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> Car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> Boat</label><br>
+            <input type="checkbox" id="vehicle4" name="vehicle4" value="JCB">
+            <label for="vehicle4">JCB</label>
+            <br>
+            <label for="fruits">Choose a fruit</label>
+            <select id="fruits" name="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="cherry">Cherry</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" minlength="5" maxlength="10" pattern="[a-zA-Z0-9]+"
+                title="Username must be between 5 and 10 letters long and contains only letters and numbers.">
+            <textarea maxlength="10" minlength="5" placeholder="enter your name"></textarea>
+            <br>
+            <label for="phonenumber">Phone Number</label>
+            <input type="number" id="phonenumber" name="phonenumber" min="8">
+        </div>
+
+
+        <div>
+            <label for="avatar">Choose a profile picture:</label>
+
+            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" multiple />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
