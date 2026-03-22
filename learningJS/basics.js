@@ -29,3 +29,45 @@ hello()
 function hello() {
     console.log("hello")
 }
+
+const numbers = [1, 2, 3, 4, 5]
+const mutipliedByTwo = numbers.map((number) => number * 2)
+
+numbers.forEach((number) => {})
+
+function myForEach(fn, arr) {
+    for (const number of arr) {
+        fn(number)
+    }
+}
+
+myForEach((number) => console.log(number), numbers)
+
+function myMap(fn, arr) {
+    const result = [];
+    for (const num of arr){
+        result.push(fn(num))
+    }
+    return result
+}
+
+const ans = myMap((number) => number * 2, numbers)
+console.log(ans)
+
+
+
+const evenNumbers = numbers.filter((number) => number % 2 == 0)
+console.log(evenNumbers)
+
+function myFilterMethod(fn, arr) {
+    const result = []
+    for (const num of arr) {
+        const toBeAdded = fn(num)
+        if (toBeAdded) { result.push(num)}
+    }
+
+    return result
+}
+
+const myAnswor = myFilterMethod((number) => number > 2, numbers)
+console.log(myAnswor)
