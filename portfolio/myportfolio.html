@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-dim": "#00e2ee",
+                        "secondary-fixed": "#d5e3fc",
+                        "on-surface-variant": "#adaaaa",
+                        "error": "#ff716c",
+                        "inverse-on-surface": "#565555",
+                        "on-tertiary-fixed-variant": "#003b66",
+                        "surface-container-highest": "#262626",
+                        "primary": "#99f7ff",
+                        "on-secondary": "#455367",
+                        "primary-fixed-dim": "#00e2ee",
+                        "error-container": "#9f0519",
+                        "on-surface": "#ffffff",
+                        "on-tertiary-fixed": "#001930",
+                        "outline": "#767575",
+                        "on-error": "#490006",
+                        "on-primary-fixed": "#004145",
+                        "surface-container": "#1a1a1a",
+                        "tertiary-dim": "#47a2f8",
+                        "on-secondary-fixed-variant": "#4e5c71",
+                        "tertiary": "#6fb5ff",
+                        "inverse-primary": "#006a70",
+                        "inverse-surface": "#fcf9f8",
+                        "on-secondary-fixed": "#324053",
+                        "surface": "#0e0e0e",
+                        "on-tertiary": "#003258",
+                        "tertiary-fixed": "#6fb5ff",
+                        "outline-variant": "#484847",
+                        "background": "#0e0e0e",
+                        "on-primary-container": "#00555a",
+                        "on-background": "#ffffff",
+                        "secondary-fixed-dim": "#c7d5ed",
+                        "surface-bright": "#2c2c2c",
+                        "surface-dim": "#0e0e0e",
+                        "primary-fixed": "#00f1fe",
+                        "on-error-container": "#ffa8a3",
+                        "error-dim": "#d7383b",
+                        "primary-container": "#00f1fe",
+                        "surface-container-high": "#20201f",
+                        "surface-container-lowest": "#000000",
+                        "surface-tint": "#99f7ff",
+                        "surface-variant": "#262626",
+                        "on-secondary-container": "#c3d1e9",
+                        "on-primary-fixed-variant": "#006065",
+                        "tertiary-fixed-dim": "#4da8fe",
+                        "on-primary": "#005f64",
+                        "surface-container-low": "#131313",
+                        "secondary-container": "#3a485b",
+                        "secondary": "#d5e3fc",
+                        "on-tertiary-container": "#002746",
+                        "tertiary-container": "#4da8fe",
+                        "secondary-dim": "#c7d5ed"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"],
+                        "mono": ["JetBrains Mono"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0e0e0e;
+            color: #ffffff;
+        }
+
+        .grid-subtle {
+            background-image: linear-gradient(to right, #1a1a1a 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="font-body selection:bg-primary/30 selection:text-primary overflow-x-hidden">
+    <!-- TopNavBar Shell -->
+    <nav
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-4 bg-surface/60 dark:bg-zinc-950/60 backdrop-blur-xl shadow-[0_0_15px_rgba(0,242,255,0.15)]">
+        <div class="font-mono font-bold text-cyan-400 dark:text-cyan-400 text-xl tracking-tighter">$ junior_dev</div>
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-tight">
+            <a class="text-zinc-400 hover:text-cyan-200 transition-colors hover:bg-white/5 px-2 py-1 rounded"
+                href="#">Learning Log</a>
+            <a class="text-zinc-400 hover:text-cyan-200 transition-colors hover:bg-white/5 px-2 py-1 rounded"
+                href="#">Projects</a>
+            <a class="text-zinc-400 hover:text-cyan-200 transition-colors hover:bg-white/5 px-2 py-1 rounded"
+                href="#">Skills</a>
+            <a class="text-zinc-400 hover:text-cyan-200 transition-colors hover:bg-white/5 px-2 py-1 rounded"
+                href="#">Contact</a>
+            <button
+                class="ml-4 px-6 py-2 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold active:scale-95 duration-150 rounded-sm">Say
+                Hello</button>
+        </div>
+        <!-- Mobile Trigger -->
+        <div class="md:hidden text-primary">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+    </nav>
+    <!-- SideNavBar Shell -->
+    <aside
+        class="fixed left-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-8 py-6 z-40 bg-zinc-900/40 dark:bg-black/40 backdrop-blur-md rounded-r-lg w-16 hidden md:flex">
+        <div class="flex flex-col items-center gap-1 mb-4">
+            <div
+                class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant/20 flex items-center justify-center overflow-hidden">
+                <img alt="Developer Profile Avatar" class="w-full h-full object-cover"
+                    data-alt="Stylized minimalist developer avatar icon"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvxPVICgkS07Vc3OkdiMesSEssdbSUPOyv3dRGaF6PSxt0Nk06YpmCyNkPR_OsrYBuZWo8hT7cdTOxBdAybEX2sGWI1ujAzDknfzIQfiM7wBpQU1DBQz59RdSWiE00poxIV9GM49dky0a8D8-BxI4qhjOZ9AXpqnw_roEGBJV4F4w4sH8tcNIEF-dWY1XgpMxDgt2XIEfuSoNTPFxfHK9uPmLe-YplRp9JyPZ80s-Fv6sBWGKBVtX5MBmx1YTE4HrfwArXZb3NRAc" />
+            </div>
+            <span class="font-mono text-[8px] text-zinc-500 uppercase tracking-widest">v0.1.0</span>
+        </div>
+        <a class="text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.8)] scale-110 group transition-all duration-200 flex flex-col items-center gap-1"
+            href="#">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">terminal</span>
+            <span class="font-mono text-[10px] uppercase tracking-widest">Home</span>
+        </a>
+        <a class="text-zinc-600 opacity-50 hover:opacity-100 transition-opacity flex flex-col items-center gap-1 group"
+            href="#">
+            <span class="material-symbols-outlined">code</span>
+            <span class="font-mono text-[10px] uppercase tracking-widest">Builds</span>
+        </a>
+        <a class="text-zinc-600 opacity-50 hover:opacity-100 transition-opacity flex flex-col items-center gap-1 group"
+            href="#">
+            <span class="material-symbols-outlined">school</span>
+            <span class="font-mono text-[10px] uppercase tracking-widest">Study</span>
+        </a>
+        <a class="text-zinc-600 opacity-50 hover:opacity-100 transition-opacity flex flex-col items-center gap-1 group"
+            href="#">
+            <span class="material-symbols-outlined">bolt</span>
+            <span class="font-mono text-[10px] uppercase tracking-widest">Stack</span>
+        </a>
+    </aside>
+    <main class="relative min-h-screen pt-24 grid-subtle">
+        <!-- Ambient Glow Elements -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-tertiary/5 rounded-full blur-[100px] pointer-events-none">
+        </div>
+        <div class="container mx-auto px-8 md:px-24 py-12 lg:py-24 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Content Left -->
+                <div class="lg:col-span-7 flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <span class="font-mono text-primary text-sm tracking-[0.3em] uppercase opacity-80">01 //
+                            BOOT_PROCESS_INITIATED</span>
+                        <h1
+                            class="font-headline text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight text-on-surface">
+                            Building the Foundations <br />
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">of the
+                                Open Web</span> <br />
+                            Every Single Day.
+                        </h1>
+                    </div>
+                    <p class="font-body text-lg text-on-surface-variant max-w-xl leading-relaxed">
+                        Aspiring Web Developer &amp; Perpetual Learner. I'm currently focused on mastering the core
+                        pillars of the web—HTML, CSS, and JavaScript—to build accessible and responsive digital
+                        experiences.
+                    </p>
+                    <div class="flex flex-wrap gap-6 mt-4">
+                        <button
+                            class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-sm shadow-[0_0_24px_rgba(153,247,255,0.15)] hover:shadow-[0_0_32px_rgba(153,247,255,0.25)] transition-all duration-300">
+                            See My Projects
+                        </button>
+                        <button
+                            class="px-8 py-4 border border-outline-variant/20 text-primary font-mono text-sm hover:bg-surface-container-high transition-colors flex items-center gap-2 group">
+                            LEARNING_PATH <span class="group-hover:translate-x-1 transition-transform">-&gt;</span>
+                        </button>
+                    </div>
+                    <!-- Tech Metadata Asymmetric -->
+                    <div class="mt-12 grid grid-cols-2 md:grid-cols-3 gap-8 pt-12 border-t border-outline-variant/10">
+                        <div class="flex flex-col">
+                            <span
+                                class="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Status</span>
+                            <span class="text-on-surface font-medium flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                                Actively Learning
+                            </span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span
+                                class="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Focus</span>
+                            <span class="text-on-surface font-medium">Responsive Design</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span
+                                class="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Location</span>
+                            <span class="text-on-surface font-medium" data-location="San Francisco">San Francisco,
+                                CA</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Terminal / 3D Style Graphic Right -->
+                <div class="lg:col-span-5 relative group">
+                    <!-- Abstract Backdrop -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent blur-3xl opacity-30 group-hover:opacity-50 transition-opacity">
+                    </div>
+                    <!-- Terminal Console -->
+                    <div
+                        class="relative bg-surface-container-lowest border border-outline-variant/20 rounded-lg overflow-hidden shadow-2xl">
+                        <!-- Terminal Header -->
+                        <div
+                            class="bg-surface-container flex items-center justify-between px-4 py-3 border-b border-outline-variant/10">
+                            <div class="flex gap-1.5">
+                                <div class="w-3 h-3 rounded-full bg-zinc-700"></div>
+                                <div class="w-3 h-3 rounded-full bg-zinc-700"></div>
+                                <div class="w-3 h-3 rounded-full bg-zinc-700"></div>
+                            </div>
+                            <div class="font-mono text-[10px] text-zinc-500 tracking-widest">learning_log.txt — 80x24
+                            </div>
+                        </div>
+                        <!-- Terminal Content -->
+                        <div class="p-6 font-mono text-sm text-on-surface-variant space-y-3 leading-relaxed">
+                            <p class="text-primary"><span class="text-zinc-600">user@junior_dev:~$</span> ls -l skills/
+                            </p>
+                            <p class="text-zinc-400">Scanning repository modules...</p>
+                            <div class="grid grid-cols-1 gap-1">
+                                <div class="flex justify-between">
+                                    <span class="text-tertiary">[HTML5/CSS3]</span>
+                                    <span class="text-zinc-600">75% Familiar</span>
+                                </div>
+                                <div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+                                    <div class="bg-tertiary h-full w-[75%]"></div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 gap-1 pt-2">
+                                <div class="flex justify-between">
+                                    <span class="text-cyan-400">[JavaScript/ES6]</span>
+                                    <span class="text-zinc-600">60% In Progress</span>
+                                </div>
+                                <div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+                                    <div class="bg-cyan-400 h-full w-[60%]"></div>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-outline-variant/5">
+                                <p class="text-zinc-500">// Recent Learning Wins</p>
+                                <p><span class="text-emerald-500">+</span> feat: finished flexbox zombie course</p>
+                                <p><span class="text-emerald-500">+</span> doc: documented first personal site</p>
+                                <p><span class="text-amber-500">!</span> fix: finally understood closure basics</p>
+                            </div>
+                            <p class="animate-pulse text-primary pt-2">_</p>
+                        </div>
+                    </div>
+                    <!-- Abstract Floating Element -->
+                    <div
+                        class="absolute -bottom-6 -right-6 w-32 h-32 bg-surface-container border border-outline-variant/20 p-4 rounded shadow-xl hidden md:block">
+                        <div class="w-full h-full flex flex-col justify-center items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-3xl">school</span>
+                            <span class="font-mono text-[8px] text-center text-zinc-400">LEVELING UP...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer Shell -->
+    <footer
+        class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-4 bg-zinc-950 dark:bg-black border-t border-outline-variant/5">
+        <div class="font-mono text-xs text-zinc-500 uppercase tracking-widest">
+            © 2026 junior_dev - Learning in Public
+        </div>
+        <div class="flex gap-8 font-mono text-xs text-zinc-500 uppercase tracking-widest">
+            <a class="hover:text-cyan-300 transition-colors active:opacity-70" href="#">GitHub</a>
+            <a class="hover:text-cyan-300 transition-colors active:opacity-70" href="#">LinkedIn</a>
+            <a class="hover:text-cyan-300 transition-colors active:opacity-70" href="#">Back to Top</a>
+        </div>
+    </footer>
+    <!-- BottomNavBar Mobile Only -->
+    <nav
+        class="md:hidden fixed bottom-0 w-full bg-surface/80 backdrop-blur-xl flex justify-around items-center py-4 z-50 border-t border-outline-variant/10">
+        <a class="text-cyan-400 flex flex-col items-center gap-1" href="#">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">terminal</span>
+            <span class="font-mono text-[9px] uppercase tracking-widest">Home</span>
+        </a>
+        <a class="text-zinc-500 flex flex-col items-center gap-1" href="#">
+            <span class="material-symbols-outlined">code</span>
+            <span class="font-mono text-[9px] uppercase tracking-widest">Builds</span>
+        </a>
+        <a class="text-zinc-500 flex flex-col items-center gap-1" href="#">
+            <span class="material-symbols-outlined">bolt</span>
+            <span class="font-mono text-[9px] uppercase tracking-widest">Stack</span>
+        </a>
+        <a class="text-zinc-500 flex flex-col items-center gap-1" href="#">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="font-mono text-[9px] uppercase tracking-widest">Contact</span>
+        </a>
+    </nav>
+</body>
+
+</html>
